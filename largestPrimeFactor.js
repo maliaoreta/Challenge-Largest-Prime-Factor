@@ -1,6 +1,20 @@
 exports.largestPrimeFactor = function(n){
   var primeNumber = 0;
-  // do your work here
+  
+  var start = 2;
 
-  return primeNumber;
+  while (n !== 1) {
+
+    if (n % start === 0) {
+      primeNumber = start;
+      n /= start;
+    }
+    else{
+      start++;
+    }
+
+  }
+
+        return primeNumber;
+
 };
